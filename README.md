@@ -1,21 +1,22 @@
-# @keegancodes/foundations-react
+# @keegancodes/foundations-next
 
-These are my shared React components I use in most apps
+These are my shared Next.js helpers I use in most apps
 
-## Components
+## Utils
 
 ```ts
-import { TailwindDebugger } from "@keegancodes/foundations-react/client";
+import { getFullyQualifiedDeploymentUrl } from "@keegancodes/foundations-next";
 ```
 
-Generally rendered conditionally for development only:
+Used to get URLs for sites with deployment protection:
 
-```tsx
-{
-  process.env.NODE_ENV === "development" ? <TailwindDebugger /> : null;
-}
-```
-
-> Borrowed from [@ImSh4yy](https://twitter.com/ImSh4yy/status/1778221562606268669)
-
-More docs coming soon
+````ts
+ const { url, headers } = await getFullyQualifiedDeploymentUrl(
+      `/api/cheers?slug=${slug}`,
+    );
+    const data = await fetch(url, {
+      cache: 'no-store',
+      headers,
+    });
+    ```
+````
