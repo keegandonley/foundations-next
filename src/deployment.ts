@@ -17,7 +17,10 @@ export const getFullyQualifiedDeploymentUrl = async (
   if (isServer()) {
     const getHeaders = (await import("next/headers")).headers;
     const headersList = getHeaders();
-    host = headersList.get("host") || "keegan.codes";
+    host =
+      headersList.get("host") ||
+      process.env.HOST_FALLBACK ||
+      process.env.NEXT_PUBLIC_HOST_FALLBACK;
     cookie = headersList.get("cookie");
   }
 
