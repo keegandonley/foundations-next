@@ -4,7 +4,6 @@ export const isServer = () => {
 
 export const getFullyQualifiedDeploymentUrl = async (
   path: `/${string}`,
-  importHeaders?: () => Promise<any>,
   defaultPort = "3000"
 ) => {
   if (process.env.NODE_ENV === "development") {
@@ -15,7 +14,7 @@ export const getFullyQualifiedDeploymentUrl = async (
   let host = null;
   let cookie;
 
-  if (isServer() && importHeaders) {
+  if (isServer()) {
     const getHeaders = (await import("next/headers")).headers;
     const headersList = getHeaders();
     host = headersList.get("host") || "keegan.codes";
