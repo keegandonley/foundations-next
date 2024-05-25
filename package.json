@@ -1,6 +1,6 @@
 {
   "name": "@keegancodes/foundations-next",
-  "version": "1.0.31",
+  "version": "2.0.0-rc.0",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "author": "Keegan Donley",
