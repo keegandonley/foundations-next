@@ -17,6 +17,7 @@ export const getFullyQualifiedDeploymentUrl = async (
   if (isServer()) {
     const getHeaders = (await import("next/headers")).headers;
     const headersList = await getHeaders();
+    console.log("[foundations-next] headers:", headersList);
     host =
       headersList.get("host") ||
       process.env.HOST_FALLBACK ||
