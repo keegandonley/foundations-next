@@ -17,10 +17,11 @@ export const getFullyQualifiedDeploymentUrl = async (
   if (isServer()) {
     const getHeaders = (await import("next/headers")).headers;
     const headersList = await getHeaders();
-    host =
-      headersList.get("host") ||
-      process.env.HOST_FALLBACK ||
-      process.env.NEXT_PUBLIC_HOST_FALLBACK;
+    host = process.env.PRIMARY_DOMAIN
+      ? `https://${process.env.PRIMARY_DOMAIN}`
+      : headersList.get("host") ||
+        process.env.HOST_FALLBACK ||
+        process.env.NEXT_PUBLIC_HOST_FALLBACK;
     cookie = headersList.get("cookie");
   }
 
