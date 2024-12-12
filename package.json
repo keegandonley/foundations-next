@@ -1,6 +1,6 @@
 {
   "name": "@keegancodes/foundations-next",
-  "version": "3.0.5",
+  "version": "4.0.1",
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "author": "Keegan Donley",
@@ -12,23 +12,21 @@
   "devDependencies": {
     "@keegancodes/foundations": "^1.0.21",
     "@types/node": "^20.12.5",
-    "@types/react": "^18.2.77",
-    "@types/react-dom": "^18.2.25",
-    "react-dom": "19.0.0-rc-02c0e824-20241028",
+    "@types/react": "19.0.1",
+    "@types/react-dom": "19.0.2",
+    "react-dom": "19.0.0",
     "ts-node": "^10.9.2",
     "typescript": "^5.4.4"
   },
   "description": "",
   "peerDependencies": {
     "@keegancodes/foundations": "^1.0.21",
-    "next": "^15.0.2",
-    "react": "19.0.0-rc-02c0e824-20241028",
-    "react-dom": "19.0.0-rc-02c0e824-20241028"
+    "next": "15.1.0",
+    "react": "19.0.0",
+    "react-dom": "19.0.0"
   },
-  "pnpm": {
-    "overrides": {
-      "@types/react": "npm:types-react@rc",
-      "@types/react-dom": "npm:types-react-dom@rc"
-    }
+  "dependencies": {
+    "next": "15.1.0",
+    "react": "19.0.0"
   }
 }
