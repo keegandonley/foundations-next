@@ -9,10 +9,10 @@ importers:
   .:
     dependencies:
       next:
-        specifier: 15.1.0
+        specifier: '>=15.1.0'
         version: 15.1.0(react-dom@19.0.0(react@19.0.0))(react@19.0.0)
       react:
-        specifier: 19.0.0
+        specifier: '>=19.0.0'
         version: 19.0.0
     devDependencies:
       '@keegancodes/foundations':
@@ -392,9 +392,6 @@ packages:
       '@swc/wasm':
         optional: true
 
-  tslib@2.6.2:
-    resolution: {integrity: sha512-AEYxH93jGFPn/a2iVAwW87VuUIkR1FVUKB77NwMF7nBTDkDrrT/Hpt/IrCJ0QXhW27jTBDcf5ZY7w6RiqTMw2Q==}
-
   tslib@2.8.1:
     resolution: {integrity: sha512-oJFu94HQb+KVduSUQL7wnpmqnfmLsOA/nAh6b6EH0wCEoK0/mPeXU6c3wKDV83MkOuHPRHtSXKKU99IBazS/2w==}
 
@@ -421,7 +418,7 @@ snapshots:
 
   '@emnapi/runtime@1.2.0':
     dependencies:
-      tslib: 2.6.2
+      tslib: 2.8.1
     optional: true
 
   '@img/sharp-darwin-arm64@0.33.5':
@@ -715,9 +712,6 @@ snapshots:
       typescript: 5.4.5
       v8-compile-cache-lib: 3.0.1
       yn: 3.1.1
-
-  tslib@2.6.2:
-    optional: true
 
   tslib@2.8.1: {}
 
