@@ -10,13 +10,13 @@
     "release": "pnpm build && ts-node publish.ts"
   },
   "devDependencies": {
-    "@keegancodes/foundations": "^1.0.21",
-    "@types/node": "^20.12.5",
+    "@keegancodes/foundations": "^1.1.2",
+    "@types/node": "^20.17.30",
     "@types/react": "19.0.1",
     "@types/react-dom": "19.0.2",
     "react-dom": "19.0.0",
     "ts-node": "^10.9.2",
-    "typescript": "^5.4.4"
+    "typescript": "^5.8.3"
   },
   "description": "",
   "peerDependencies": {
@@ -26,7 +26,7 @@
     "react-dom": ">=19.0.0"
   },
   "dependencies": {
-    "next": ">=15.1.0",
-    "react": ">=19.0.0"
+    "next": "^15.3.1",
+    "react": "^19.1.0"
   }
 }
